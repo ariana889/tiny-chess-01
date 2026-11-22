@@ -3,7 +3,7 @@
 A compact original engine: `main.py` unpacks and execs an lzma-packed
 0x88 negamax search with alpha-beta, PVS, LMR, null-move pruning,
 transposition table, killer ordering and quiescence, on a fixed
-100,000-node budget per move, so replays are deterministic.
+100,000-node budget per move, so replays stay deterministic.
 
 ## The size rule
 

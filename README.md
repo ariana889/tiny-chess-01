@@ -7,10 +7,10 @@ transposition table, killer ordering and quiescence, on a fixed
 
 ## The size rule
 
-- `main.py` is the whole engine: at most 4,096 bytes as committed,
+- `main.py` is the entire engine: at most 4,096 bytes as committed,
   Python 3.13, standard library only. It reads, imports or execs no other
-  file in the repository.
-- Every byte counts: comments, whitespace, docstrings.
+  file from the repository.
+- Every byte counts: comments, whitespace and docstrings.
 - Compression is allowed and counted. A `main.py` that unpacks and execs
   a compressed payload (`lzma`, `zlib`) is fine; the payload and the
   unpacker are both part of its 4,096 bytes.
@@ -27,5 +27,5 @@ kit, unpack it, and from inside it run:
     makefun grade-local --kit . --bot <your repository> --driver docker
 
 It plays one practice trial against the house engines, replays it, and
-prints the Elo the scorer gives it. Before you submit, `makefun check`
+prints the Elo the scorer assigns it. Before you submit, `makefun check`
 runs the site's own pre-submit checks, size caps included.
